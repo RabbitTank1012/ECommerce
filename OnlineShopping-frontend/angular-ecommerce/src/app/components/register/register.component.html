@@ -1,0 +1,53 @@
+<div class="main-content">
+    <div class="section-content section-content-p30">
+        <div class="container-fluid">
+            <h3> Register a new User</h3>
+
+            <form [formGroup]="addUserForm" class="form-area">
+                <div class="row">
+                    <div class="col-md-2"> <label>User Name:</label></div>
+                    <div class="col-md-4">
+                        <div class="input-space">
+                            <input id="userName" formControlName="userName" type="text" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-2"> <label>Password:</label></div>
+                    <div class="col-md-4">
+                        <div class="input-space">
+                            <input id="userPassword" formControlName="userPassword" type="text" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2"> <label>Email:</label></div>
+                    <div class="col-md-4">
+                        <div class="input-space">
+                            <input id="userEmail" formControlName="userEmail" type="text" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-2"> <label>userRole:</label></div>
+                    <div class="col-md-2">
+                        <div class="input-space">
+                           
+                            <select id="userRole" formControlName="userRole" required>
+                                <option value="admin">Admin</option>
+                                <option value="user">User</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <button (click)="addUser()" class="btn btn-primary ">Add User</button>
+              
+            </form>
+        </div>
+    </div>
+</div>
+
+
+

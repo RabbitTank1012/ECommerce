@@ -1,0 +1,41 @@
+<div class="main-content">
+    <div class="section-content section-content-p30">
+        
+        <h3> Popular Products Top 3</h3>
+        <table class="table table-bordered">
+
+            <thead class="thead-dark">
+                <tr>
+                    <th width="25%">Product Name</th>
+                    <th width="25%">Quantity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let tempProduct of popularproducts">
+                    <td class="align-middle">{{ tempProduct.product}}</td>
+                    <td class="align-middle">{{ tempProduct.quantity}}</td>
+                </tr>
+        
+            </tbody>
+        </table>
+        <hr>
+        <h3> Profit Products Top 3</h3>
+        <table class="table table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th width="25%">Product Name</th>
+                    <th width="25%">Profit</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let tempProduct of profitproducts">
+                    <td class="align-middle">{{ tempProduct.product}}</td>
+                    <td class="align-middle">{{ tempProduct.profit}}</td>
+                </tr>
+        
+            </tbody>
+        </table>
+
+    </div>
+</div>
+

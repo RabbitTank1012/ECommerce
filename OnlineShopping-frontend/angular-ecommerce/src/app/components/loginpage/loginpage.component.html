@@ -1,0 +1,32 @@
+<div class="main-content">
+  <div class="section-content section-content-p30">
+    <h3> Welcome to Login</h3>
+
+    <form [formGroup]="loginUserForm" class="form-area">
+      <div class = "row">
+      <div class="col-md-2"><label for="userName">User Name:</label></div>
+      <div class="col-md-4">
+        <div class = "input-space">
+        <input type="text" id="userName" class="au-input au-input-xl" formControlName="userName" required>
+        </div>
+      </div>
+      </div>
+
+      <div class = "row">
+      <div class="col-md-2"> <label for="userPassword">Password:</label></div>
+      <div class="col-md-4">
+        <div class = "input-space">
+          <input type="text" id="userPassword" class="au-input au-input-xl" formControlName="userPassword" required>
+        </div>
+      
+      </div>
+
+      </div>
+      
+
+     
+      <button (click)="loginSubmit()" class="btn btn-primary ">Login</button>
+    </form>
+
+  </div>
+</div>

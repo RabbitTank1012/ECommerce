@@ -1,0 +1,48 @@
+<div class="main-content">
+    <div class="section-content section-content-p30">
+        
+         <!-- <button  class="btn btn-primary ">FrequentProduct</button>
+         <button  class="btn btn-primary ">RecentProduct</button> -->
+        <a routerLink="/popularprofitproducts" class="mt-5">Popular & Profit Purchased Products </a>
+        <br>
+        <br>
+        <h3> All Orders</h3>
+        <table class="table table-bordered">
+
+            <thead class="thead-dark">
+                <tr>
+                    <th width="25%">Number</th>
+                    <th width="25%">Date_Created</th>
+                    <th width="25%">Order Status</th>
+                    <th width="12.5%">Cancel</th>
+                    <th width="12.5%">Complete</th>
+                    
+                </tr>
+            </thead>
+        
+            <tbody>
+                <tr *ngFor="let tempOrder of orders; let i = index">
+                    <td class="align-middle">{{ i+1}}</td>
+                    <a routerLink="/order/{{ tempOrder.order_id }}">
+                        <td class="align-middle">{{ tempOrder.date_created}} </td>
+                    </a>
+                    
+                    <td class="align-middle">{{ tempOrder.order_status}}</td>
+                    <td>
+                        <!-- <button  class="btn btn-primary ">AddShopCart</button> -->
+                        <button (click)="CanCelOrder(tempOrder,i)" class="btn btn-primary btn-sm">Cancel</button>
+                    </td>
+
+                    <td>
+                        <!-- <button  class="btn btn-primary ">AddShopCart</button> -->
+                        <button (click)="CompleteOrder(tempOrder,i)" class="btn btn-primary btn-sm">Complete</button>
+                    </td>
+                    <!-- <td>
+                        <button  class="btn btn-primary ">Cancel</button>
+                    </td> -->
+                </tr>
+        
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+<div class="main-content">
+    <div class="section-content section-content-p30">
+        
+        <h3> Update Product</h3>
+        
+        <form [formGroup]="addProductForm" >
+            <label for="productName">Product Name:</label>
+            <input type="text" id="productName" class="au-input au-input-xl" formControlName="productName" required>
+            <br>
+            <br>
+            <label for="productDescription">Description:</label>
+            <input type="text" id="productDescription" class="au-input au-input-xl" formControlName="productDescription" required>
+            <br>
+            <br>
+            <label for="productRetailPrice">Retail Price:</label>
+            <input type="text" id="productRetailPrice"  class="au-input au-input-xl" formControlName="productRetailPrice" required>
+            <br>
+            <br>
+          
+            <label for="productQuantity">Quantity:</label>
+            <input type="text" id="productQuantity"  class="au-input au-input-xl" formControlName="productQuantity" required>
+            <br>
+            <br>
+
+            <label for="productWholePrice">Whole Price:</label>
+            <input type="text" id="productWholePrice"  class="au-input au-input-xl" formControlName="productWholePrice" required>
+            <br>
+            <br>
+        
+            <button (click)="UpdatProduct()" class="btn btn-primary ">Update Product</button>
+        </form>
+        
+    </div>
+</div>
+

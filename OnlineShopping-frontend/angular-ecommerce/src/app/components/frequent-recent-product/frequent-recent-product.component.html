@@ -1,0 +1,42 @@
+<div class="main-content">
+    <div class="section-content section-content-p30">
+        
+        <h3> Frequent Products Top 3</h3>
+        <table class="table table-bordered">
+
+
+            <thead class="thead-dark">
+                <tr>
+                    <th width="20%"> Product Name</th>
+                    <th width="20%">Purchased Frequent</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let tempProduct of frecentproducts">
+                    <td class="align-middle">{{ tempProduct.product}}</td>
+                    <td class="align-middle">{{ tempProduct.frequent}}</td>
+                </tr>
+        
+            </tbody>
+        </table>
+        <hr>
+        <h3> Recent Products Top 3</h3>
+        <table class="table table-bordered">
+
+            <thead class="thead-dark">
+                <tr>
+                    <th width="20%">Product Name</th>
+                    <th width="20%">Purchased Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let tempProduct of recentproducts">
+                    <td class="align-middle">{{ tempProduct.product}}</td>
+                    <td class="align-middle">{{ tempProduct.date}}</td>
+                </tr>
+        
+            </tbody>
+        </table>
+
+    </div>
+</div>

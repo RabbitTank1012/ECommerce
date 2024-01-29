@@ -1,0 +1,37 @@
+<div class="menu-sidebar-content js-scrollbar1">
+    <nav class="navbar-sidebar">
+        <ul class="list-unstyled navbar-list">
+            <!-- <li *ngFor="let tempProductCategory of productCategories">
+
+                <a routerLink="/category/{{ tempProductCategory.id }}" routerLinkActive="active-link">
+                    {{ tempProductCategory.categoryName }}
+                </a>
+                 <li *ngIf="isAuthenticated && isAdmin;then orderadmin else order"></li>
+                 <ng-template #orderadmin><li><a routerLink="/orderadmin">Orders</a></li></ng-template>
+                 <ng-template #order><li><a routerLink="/order">Orders</a></li></ng-template>
+                 
+                 <li *ngIf="isAuthenticated && isAdmin;then productadmin else product"></li>
+                 <ng-template #productadmin><li><a routerLink="/productadmin">Products</a></li></ng-template>
+                 <ng-template #product><li><a routerLink="/product"Products</a></li></ng-template>
+
+            </li>  -->
+            <!-- <li>
+                
+                <a routerLink="/orderadmin" class="mt-5">Orders</a>
+                
+            </li>
+            <li>
+                <a routerLink="/productadmin" class="mt-5">Products</a>
+            </li> -->
+
+            <li *ngIf="isAdmin;then orderadmin else order"></li>
+                 <ng-template #orderadmin><li><a routerLink="/orderadmin" class="mt-5">Orders</a></li></ng-template>
+                 <ng-template #order><li><a routerLink="/order" class="mt-5">Orders</a></li></ng-template>
+                 
+            <li *ngIf="isAdmin;then productadmin else product"></li>
+                 <ng-template #productadmin><li><a routerLink="/productadmin" class="mt-5">Products</a></li></ng-template>
+                 <ng-template #product><li><a routerLink="/product" class="mt-5">Products</a></li></ng-template>
+            
+        </ul>
+    </nav>
+</div>

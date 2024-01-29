@@ -1,0 +1,40 @@
+<div class="main-content">
+    <div class="section-content section-content-p30">
+        
+         <!-- <button  class="btn btn-primary ">FrequentProduct</button>
+         <button  class="btn btn-primary ">RecentProduct</button> -->
+        <!-- <a routerLink="/freqentrecentproducts" class="mt-5">Frequent & Recent Purchased Products </a> -->
+        <button (click)="addProduct()" class="btn btn-primary btn-sm">AddProduct</button>
+        <br>
+        <br>
+        <h3> All Products</h3>
+        <table class="table table-bordered">
+
+            <thead class="thead-dark">
+                <tr>
+                    <th width="25%">Number</th>
+                    <th width="25%">Name</th>
+                    <th width="25%">Price</th>
+                    <th width="25%">Edit Product Info</th>
+                </tr>
+            </thead>
+        
+            <tbody>
+                <tr *ngFor="let tempProduct of products;let i = index">
+                    <td class="align-middle">{{ i+1}} </td>
+                    <a routerLink="/product/{{ tempProduct.product_id }}">
+                        <td class="align-middle">{{ tempProduct.name}} </td>
+                    </a>
+                    
+                    <td class="align-middle">{{ tempProduct.retail_price | currency:'USD'}}</td>
+                    <td>
+                        <!-- <button  class="btn btn-primary ">AddShopCart</button> -->
+                        <button (click)="EditProduct(tempProduct)" class="btn btn-primary btn-sm">EditProduct</button>
+                    </td>
+                    
+                </tr>
+        
+            </tbody>
+        </table>
+    </div>
+</div>

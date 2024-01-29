@@ -1,0 +1,59 @@
+<div class="main-content">
+    <div class="section-content section-content-p30">
+
+        <!-- <button  class="btn btn-primary ">FrequentProduct</button>
+         <button  class="btn btn-primary ">RecentProduct</button> -->
+
+        <h3> Add a new Product</h3>
+
+        <form [formGroup]="addProductForm" class="form-area">
+            <div class="row">
+                <div class="col-md-2"> <label>Product Name:</label></div>
+                <div class="col-md-4">
+                    <div class="input-space">
+                        <input id="productName" formControlName="productName" type="text" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-2"> <label>Description:</label></div>
+                <div class="col-md-8">
+                    <div class="input-space">
+                        <input id="productDescription" formControlName="productDescription" type="text" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-2"> <label>Retail Price:</label></div>
+                <div class="col-md-3">
+                    <div class="input-space">
+                        <input id="productRetailPrice" formControlName="productRetailPrice" type="text" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-2"> <label>Quantity:</label></div>
+                <div class="col-md-3">
+                    <div class="input-space">
+                        <input id="productQuantity" formControlName="productQuantity" type="text" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-2"> <label>Whole Price:</label></div>
+                <div class="col-md-3">
+                    <div class="input-space">
+                        <input id="productWholePrice" formControlName="productWholePrice" type="text" required>
+                    </div>
+                </div>
+            </div>
+
+            <button (click)="addProduct()" class="btn btn-primary ">Add Product</button>
+        </form>
+
+    </div>
+</div>

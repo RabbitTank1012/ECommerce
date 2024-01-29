@@ -1,0 +1,39 @@
+<div class="main-content">
+    <div class="section-content section-content-p30">
+        
+         <!-- <button  class="btn btn-primary ">FrequentProduct</button>
+         <button  class="btn btn-primary ">RecentProduct</button> -->
+         <a routerLink="/product" class="mt-5">Back to Product List</a>
+        <br>
+        <br>
+        <h3> Watchlist Details</h3>
+        <table class="table">
+
+            <thead class="thead-dark">
+                <tr>
+                    <th>Number</th>
+                    <th>Product Name</th>
+                    <th>Delete Product</th>
+                </tr>
+               
+            </thead>
+        
+            <tbody>
+                <tr *ngFor="let tempWachlist of watchlists;let i = index">
+                    <td class="align-middle">{{i+1 }}</td>
+                    <td class="align-middle">{{tempWachlist.product_name }}</td>
+                    <td>
+                        <!-- <button  class="btn btn-primary ">AddShopCart</button> -->
+                        <button (click)="removeFromWatchlist(tempWachlist)" class="btn btn-primary btn-sm">Remove</button>
+                    </td>
+                    <td>
+                        <!-- <button  class="btn btn-primary ">AddShopCart</button> -->
+                        <button (click)="addToCart(tempWachlist)" class="btn btn-primary btn-sm">Add to Cart</button>
+                    </td>
+            
+                </tr>
+        
+            </tbody>
+        </table>
+    </div>
+</div>

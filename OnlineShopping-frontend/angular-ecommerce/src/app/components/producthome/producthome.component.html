@@ -1,0 +1,28 @@
+<div class="main-content">
+    <div class="section-content section-content-p30">
+        <h3> All Products</h3>
+        <table class="table">
+
+            <thead class="thead-dark">
+                <tr>
+                    <th>Number</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+        
+            <tbody>
+                <tr *ngFor="let tempProduct of products;let i = index">
+                    <td class="align-middle">{{ i+1 }} </td>
+                    <a routerLink="/product/{{ tempProduct.product_id }}">
+                        <td class="align-middle">{{ tempProduct.name}} </td>
+                    </a>
+                    
+                    <td class="align-middle">{{ tempProduct.retail_price | currency:'USD'}}</td>
+                    
+                </tr>
+        
+            </tbody>
+        </table>
+    </div>
+</div>

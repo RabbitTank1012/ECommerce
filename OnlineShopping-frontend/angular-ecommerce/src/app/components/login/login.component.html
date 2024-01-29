@@ -1,0 +1,23 @@
+<div class="form-header">
+    <!-- <div *ngIf="isAuthenticated && username" class="login-status-user-info">
+        Welcome {{username }}!
+    </div> -->
+
+
+    <!-- <div class="login-status-user-info">
+        Welcome {{username }}
+    </div>
+      -->
+    <button *ngIf="!isAuthenticated" (click)="Login()" class="au-btn-submit">
+        Login
+    </button>
+
+    <button *ngIf="isAuthenticated" (click)="Logout()" class="au-btn-submit">
+        Logout
+    </button>
+
+    <button (click)="Register()" class="au-btn-submit">
+        Register
+    </button>
+
+</div>
